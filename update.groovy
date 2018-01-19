@@ -27,7 +27,7 @@ versions = versions.unique()
 versions.each() { version->
 
     def folder = new File(version);
-    if (!folder.exists()) {
+    // if (!folder.exists()) {
         "mkdir ${version}".execute().waitFor();
         String dockerfile = generateDockerfile(version);
 
@@ -44,9 +44,9 @@ versions.each() { version->
         execute("git commit -m '${version}'")
         execute("git tag -f ${version}");
         execute("git push origin -f ${version}");
-    } else {
-        println "${version} directory exists, skipping";
-    }
+    // } else {
+    //     println "${version} directory exists, skipping";
+    // }
 }
 
 def execute(String cmd) {
