@@ -9,11 +9,12 @@ process.text.eachLine() {
 
     if (result.size() > 0) {
         // println result[0];
-        def version = result[0][0];
+        def version = result[0][0].replace('v','');
+        println version;
         def majorVersion = result[0][1];
         def minorVersion = Integer.parseInt(result[0][2]);
         def patchVersion = result[0][3];
-        println "v${majorVersion}.${minorVersion}.${patchVersion}"
+        println "${majorVersion}.${minorVersion}.${patchVersion}"
 
         if (majorVersion > 0 && minorVersion >= 23) {
             versions << version;
