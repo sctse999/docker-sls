@@ -2,6 +2,6 @@ FROM node:8.10.0
 
 LABEL maintainer="jtse@proactivesystem.com.hk"
 
-RUN npm install -g serverless@1.23.0
+RUN npm install -g serverless@1.24.0
 
 
