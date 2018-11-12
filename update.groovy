@@ -14,7 +14,7 @@ process.text.eachLine() {
         def minorVersion = Integer.parseInt(result[0][2]);
         // def patchVersion = result[0][3];
 
-        if (majorVersion > 0 && minorVersion >= 23) {
+        if (majorVersion > 0 && minorVersion >= 23 && minorVersion <=23) {
             println "version = ${version}";
             versions << version;
         }
