@@ -1,4 +1,4 @@
-FROM node:6.10.3
+FROM node:8.10.0
 
 LABEL maintainer="jtse@proactivesystem.com.hk"
 
